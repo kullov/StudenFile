@@ -56,7 +56,7 @@ public class StudentFile {
 
 	}
 
-	public Address enterAddress() {
+	private Address enterAddress() {
 		Address address = new Address();
 		Scanner scan = new Scanner(System.in);
 
@@ -77,7 +77,7 @@ public class StudentFile {
 		
 		return address;
 	}
-	public Student[] enterStudent(int numberOfStudent) {
+	private Student[] enterStudent(int numberOfStudent) {
 		System.out.println("=================================================================");
 		Scanner scan = new Scanner(System.in);
 		Student[] students = new Student[numberOfStudent];
@@ -102,14 +102,14 @@ public class StudentFile {
 		}
 		return students;
 	}
-	public void showStudents(Student[] students) {
+	private void showStudents(Student[] students) {
 		System.out.println("Show list of students: ");
 		for (Student student : students) {
 			System.out.println(student.toString());
 		}
 	}
 
-	public void showStudentsWasBornInYOB(Student[] students, int YOB) {
+	private void showStudentsWasBornInYOB(Student[] students, int YOB) {
 				for (Student student : students) {
 					if (student.getYOB() == YOB) {
 						System.out.println(student.toString());
@@ -117,7 +117,7 @@ public class StudentFile {
 				}
 	}
 	
-	public int countStudent(Student[] students, int YOB) {
+	private int countStudent(Student[] students, int YOB) {
 		int count = 0;
 		for (Student student : students) {
 			if (student.getYOB() == YOB && student.getAddress().getCity().equalsIgnoreCase("HN")) {
